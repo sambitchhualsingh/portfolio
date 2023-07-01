@@ -89,3 +89,48 @@ body{
 .social-icons a:hover{
     color: #fff;
 }
+
+/* page */
+.page{
+    position: fixed;
+    height:100vh;
+    inset: 0;
+    width: 100%;
+    overflow-y: auto;
+    transform: scale(0);
+    transition: transform 0.3s;
+    background-color: #eff2f5;
+    color: #1d1e22;
+
+}
+
+.page .page-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5vw;
+    background-color: #fff;
+    font-weight: bold;
+    box-shadow: 0px 5px 5px 0px #e5e5e5;
+
+}
+
+.page .page-header .page-title{
+    font-size: 1.5rem;
+
+
+}
+
+.page .page-header .page-close{
+    display: flex;
+    cursor: pointer;
+}
+
+.page .page-body{
+    padding: 2rem 5vw;
+    overflow-y: auto;
+
+}
+.page--active{
+    transform: scale(1);
+}
