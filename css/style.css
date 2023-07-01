@@ -3,5 +3,75 @@
 }
 
 body{
-    background-color: #00e501;
+    display: grid;
+    place-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab);
+    background-size: 400% 400%;
+    position: relative;
+    animation: bgAnim 30s ease infinite;
+}
+
+/* animation code */
+
+@keyframes bgAnim{
+    0%{
+        background-position: 0% 0%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+/* container */
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding-block: 5hv;
+    gap: 0.57rem;
+}
+
+/* image */
+.container .avatar{
+    display: flex;
+    grid-column: span 2;
+    justify-content: center;
+    width: 250px;
+}
+
+.container .avatar img{
+    border-radius: 50%;
+    width: 175px;
+    object-fit: cover;
+}
+
+/* user name */
+.container .username{
+    color: #222;
+    grid-column: span 2;
+    margin-block-start: 0.7rem;
+    margin-block-end: 2rem;
+
+}
+
+/* button */
+.container .button{
+    width: 120px;
+    background-color: transparent;
+    border: 2px solid #555;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.6s;
+}
+
+.container .button:hover{
+    background-color: #222;
+    color: #fff;
 }
